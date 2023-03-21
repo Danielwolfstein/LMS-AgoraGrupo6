@@ -14,8 +14,8 @@
 
 /* Card Principal */
 .card {
-  width: 280px;
-  height: 70vh;
+  width: 250px;
+  height: 40vh;
   max-height: 500px;
   margin: max(10px, 2vw);
   text-decoration: none;
