@@ -4,6 +4,9 @@
   margin: 5vh;
   text-align: center;
   width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+
 }
 .userTableProfile {
   border-collapse: inherit;
