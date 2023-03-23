@@ -1,16 +1,36 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import style from "./MenuDashboard.module.css";
 import "../header/UserLink.css";
 import { IconContext } from "react-icons";
+
+
 
 export function MenuDashboard({ open, setOpen }) {
   const auth = useSelector((state) => state.auth);
   const params = useParams();
   const cohortID = params.id;
+
+  let location = useLocation();
+  let pos=location.pathname.split("/");
+  console.log(pos[3]) ;
+
   const { isTeacher } = auth;
-  const [activeLink, setActiveLink] = useState(1);
+  let post=0;
+
+  // eslint-disable-next-line default-case
+  switch (pos[3]){
+    case 'statistics': post=0;break;
+    case 'projects': post=1;break;
+    case 'workbooks': post=2;break;
+    case 'queries': post=3;break;
+    case 'announcements-cohort': post=4;break;
+    case 'students': post=5;break;
+    
+  } 
+
+  const [activeLink, setActiveLink] = useState(post);
   const navLinks = [
     {
       text: "Estadísticas",
