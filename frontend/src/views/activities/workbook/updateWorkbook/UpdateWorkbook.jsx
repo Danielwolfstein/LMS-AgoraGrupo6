@@ -78,7 +78,7 @@ export function UpdateWorkbook() {
       headers: { Authorization: id },
     });
     setWorkbook(res.data);
-    setImage(res.data.pictureProject);
+    setImage(res.data.pictureWorkbook);
   };
 
   useEffect(() => {

@@ -74,7 +74,7 @@ export function UpdateQuery() {
       headers: { Authorization: id },
     });
     setQuery(res.data);
-    setImage(res.data.pictureProject);
+    setImage(res.data.pictureQuery);
   };
 
   useEffect(() => {
